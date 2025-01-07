@@ -293,10 +293,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac64da091285234fb9a300e5c76a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentLevel: 0
+  level: 0
+  stage: 0
+  stagesPerLevel: 3
+  currentTooth: 0
+  correctTooth: 0
+  confirmDelay: 1
   wheel: {fileID: 314159067}
   confirm: 32
-  correctClick: {fileID: 775281617}
+  latchSound: {fileID: 775281617}
+  passStageSound: {fileID: 0}
+  passLevelSound: {fileID: 0}
 --- !u!4 &775281616
 Transform:
   m_ObjectHideFlags: 0
@@ -449,6 +456,34 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 775281615}
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: onWheelPositionChanged
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: levelManager, FMODUnity
+      objectReference: {fileID: 0}
+    - target: {fileID: 1998291608515215586, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
+      propertyPath: newMessage.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 5420740650848201921, guid: d8cc398d6cb716c4784307c8f0689462, type: 3}
       propertyPath: m_Name
       value: TurnWheel
