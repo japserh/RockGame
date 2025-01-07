@@ -143,7 +143,7 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638718657935967114
+  lastModified: 638718722234963440
   FileSizes:
   - Name: Desktop
     Value: 1104
@@ -299,7 +299,7 @@ MonoBehaviour:
   - {fileID: 1161782022156247932}
   StringsBanks:
   - {fileID: -6091568468558509110}
-  cacheTime: 638718661533380464
+  cacheTime: 638718722234973431
   cacheVersion: 131622
 --- !u!114 &215568838151907981
 MonoBehaviour:
@@ -356,7 +356,7 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638718657935947048
+  lastModified: 638718722234943458
   FileSizes:
   - Name: Desktop
     Value: 1036
@@ -403,7 +403,7 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Safe Door.bank
   Name: Safe Door
   StudioPath: bank:/Safe Door
-  lastModified: 638718661533380464
+  lastModified: 638718722234973431
   FileSizes:
   - Name: Desktop
     Value: 43520
@@ -470,7 +470,7 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Background.bank
   Name: Background
   StudioPath: bank:/Background
-  lastModified: 638718657937504007
+  lastModified: 638718722234923506
   FileSizes:
   - Name: Desktop
     Value: 2050
