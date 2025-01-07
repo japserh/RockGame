@@ -9,6 +9,7 @@ public class SerialRotator : SerialReader
 {
     public int rotationSteps = 40;
     public float lerpFactor = 0.1f;
+    public int position;
     
     private readonly string rotation_prefix = "pos:";
     private readonly string direction_prefix = "dir:";
@@ -42,6 +43,7 @@ public class SerialRotator : SerialReader
         
         // 20 step Rotary Encoder
         rotation = pos * (360 / rotationSteps);
+        position = Mod(pos, rotationSteps);
         direction = dir;
 
         emitter.Play();
@@ -57,4 +59,6 @@ public class SerialRotator : SerialReader
         var target = Quaternion.Euler(0, rotation, 0);
         gameObject.transform.localRotation = Quaternion.Lerp(gameObject.transform.localRotation, target, lerpFactor);
     }
+    
+    int Mod(int a, int n) => (a % n + n) % n;
 }
