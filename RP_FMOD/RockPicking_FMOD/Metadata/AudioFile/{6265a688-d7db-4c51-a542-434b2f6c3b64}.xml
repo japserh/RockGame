@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{6265a688-d7db-4c51-a542-434b2f6c3b64}">
+		<property name="assetPath">
+			<value>Ooga_Booga_10.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>3.3910624999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e16fe397-17ad-4e5f-b7a8-c5e179e3238d}</destination>
+		</relationship>
+	</object>
+</objects>
