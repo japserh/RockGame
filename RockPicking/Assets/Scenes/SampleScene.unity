@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 477495184}
   - component: {fileID: 477495183}
   - component: {fileID: 477495182}
+  - component: {fileID: 477495186}
   m_Layer: 0
   m_Name: Constant Sounds
   m_TagString: Untagged
@@ -293,6 +294,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &477495186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 477495181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7f044b30029a9b4fbe85245a2f54dbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelManager: {fileID: 0}
+  threatSound: {fileID: 0}
+  ambienceSound: {fileID: 0}
+  goalSound: {fileID: 0}
+  lerpFactor: 0
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +421,8 @@ GameObject:
   - component: {fileID: 775281617}
   - component: {fileID: 775281619}
   - component: {fileID: 775281618}
+  - component: {fileID: 775281621}
+  - component: {fileID: 775281620}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -425,14 +445,19 @@ MonoBehaviour:
   level: 0
   stage: 0
   stagesPerLevel: 3
+  winLevel: 4
   currentTooth: 0
   correctTooth: 0
   confirmDelay: 1
   wheel: {fileID: 314159067}
   confirm: 32
+  "g\xF6pySl\xF6pyTime": 60
   latchSound: {fileID: 775281617}
   passStageSound: {fileID: 775281619}
   passLevelSound: {fileID: 775281618}
+  loseSound: {fileID: 775281621}
+  winSound: {fileID: 775281620}
+  backgroundSound: {fileID: 477495186}
 --- !u!4 &775281616
 Transform:
   m_ObjectHideFlags: 0
@@ -530,6 +555,68 @@ MonoBehaviour:
       Data3: -279053405
       Data4: -1264715960
     Path: event:/Stage Success
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &775281620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775281614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: -660987200
+      Data2: 1335583583
+      Data3: 213271950
+      Data4: -724916903
+    Path: event:/Win
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &775281621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775281614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1726172447
+      Data2: 1107602255
+      Data3: -122480237
+      Data4: -571148290
+    Path: event:/Lose
   Event: 
   EventPlayTrigger: 0
   EventStopTrigger: 0

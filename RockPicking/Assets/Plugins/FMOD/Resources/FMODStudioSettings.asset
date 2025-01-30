@@ -456,7 +456,7 @@ MonoBehaviour:
   sourceProjectPath: ../RP_FMOD/RockPicking_FMOD/RockPicking_FMOD.fspro
   sourceBankPath: ../RP_FMOD/RockPicking_FMOD/Build
   sourceBankPathUnformatted: 
-  BankRefreshCooldown: 5
+  BankRefreshCooldown: 1
   ShowBankRefreshWindow: 1
   AutomaticEventLoading: 1
   BankLoadType: 0
@@ -479,6 +479,7 @@ MonoBehaviour:
   - Master
   Banks:
   - Background
+  - End
   - Safe Door
   BanksToLoad: []
   LiveUpdatePort: 9264

@@ -94,13 +94,14 @@ MonoBehaviour:
     Data4: 1671693414
   Banks:
   - {fileID: 7410517131467081853}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: -2243652875840244098}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 10000
 --- !u!114 &-6145257961873596653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +129,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 325
+--- !u!114 &-6132374937867352907
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Lose
+  m_EditorClassIdentifier: 
+  Path: event:/Lose
+  Guid:
+    Data1: 1726172447
+    Data2: 1107602255
+    Data3: -122480237
+    Data4: -571148290
+  Banks:
+  - {fileID: 8115551339316560077}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 10000
 --- !u!114 &-6091568468558509110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -143,10 +171,10 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 638718722234963440
+  lastModified: 638738708110591659
   FileSizes:
   - Name: Desktop
-    Value: 1104
+    Value: 1686
   Exists: 1
 --- !u!114 &-5527379607269135340
 MonoBehaviour:
@@ -168,13 +196,14 @@ MonoBehaviour:
     Data4: -2102470617
   Banks:
   - {fileID: 7410517131467081853}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -1140149356292586166}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 187820
 --- !u!114 &-5232390160149758490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,7 +230,55 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 1565
+--- !u!114 &-4208131351507306554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Goal_Distance
+  m_EditorClassIdentifier: 
+  Name: Goal_Distance
+  StudioPath: parameter:/Goal_Distance
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 456441647
+    data2: 378275971
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-3767099764341297940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Threat_Distance
+  m_EditorClassIdentifier: 
+  Name: Threat_Distance
+  StudioPath: parameter:/Threat_Distance
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 1049729468
+    data2: 1940193729
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-2869046559016162232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,6 +319,78 @@ MonoBehaviour:
   - Name: Desktop
     Value: 806
   Exists: 1
+--- !u!114 &-2243652875840244098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Threat/Threat_Distance
+  m_EditorClassIdentifier: 
+  Name: Threat_Distance
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 1049729468
+    data2: 1940193729
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1950447150438468305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Goal/Goal_Distance
+  m_EditorClassIdentifier: 
+  Name: Goal_Distance
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 456441647
+    data2: 378275971
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &-1140149356292586166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Depth
+  m_EditorClassIdentifier: 
+  Name: Depth
+  StudioPath: 
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 210307384
+    data2: 3692921806
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &-161792102645501264
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,10 +414,11 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: -1950447150438468305}
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 3391
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,6 +436,7 @@ MonoBehaviour:
   - {fileID: 1161782022156247932}
   - {fileID: 4799161191405235772}
   - {fileID: 7410517131467081853}
+  - {fileID: 8115551339316560077}
   EditorEvents:
   - {fileID: -6145257961873596653}
   - {fileID: -7003459717401115369}
@@ -294,12 +445,18 @@ MonoBehaviour:
   - {fileID: -5232390160149758490}
   - {fileID: 6429085130293639191}
   - {fileID: 2452727774170988920}
-  EditorParameters: []
+  - {fileID: -6132374937867352907}
+  - {fileID: 2783965810606151498}
+  EditorParameters:
+  - {fileID: 385065938480347089}
+  - {fileID: 3653471512079119078}
+  - {fileID: -4208131351507306554}
+  - {fileID: -3767099764341297940}
   MasterBanks:
   - {fileID: 1161782022156247932}
   StringsBanks:
   - {fileID: -6091568468558509110}
-  cacheTime: 638718722234973431
+  cacheTime: 638738708110591659
   cacheVersion: 131622
 --- !u!114 &215568838151907981
 MonoBehaviour:
@@ -320,6 +477,30 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1036
+  Exists: 1
+--- !u!114 &385065938480347089
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  StudioPath: parameter:/Level
+  Min: 0
+  Max: 5
+  Default: 1
+  ID:
+    data1: 3987721510
+    data2: 2599653567
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &439553278003652865
 MonoBehaviour:
@@ -356,10 +537,10 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 638718722234943458
+  lastModified: 638738708110580898
   FileSizes:
   - Name: Desktop
-    Value: 1036
+    Value: 2744
   Exists: 1
 --- !u!114 &2452727774170988920
 MonoBehaviour:
@@ -387,7 +568,58 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 0
+  Length: 3911
+--- !u!114 &2783965810606151498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Win
+  m_EditorClassIdentifier: 
+  Path: event:/Win
+  Guid:
+    Data1: -660987200
+    Data2: 1335583583
+    Data3: 213271950
+    Data4: -724916903
+  Banks:
+  - {fileID: 8115551339316560077}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 3048
+--- !u!114 &3653471512079119078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Depth
+  m_EditorClassIdentifier: 
+  Name: Depth
+  StudioPath: parameter:/Depth
+  Min: 0
+  Max: 100
+  Default: 0
+  ID:
+    data1: 210307384
+    data2: 3692921806
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
 --- !u!114 &4799161191405235772
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,10 +635,34 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Safe Door.bank
   Name: Safe Door
   StudioPath: bank:/Safe Door
-  lastModified: 638718722234973431
+  lastModified: 638738653199668415
   FileSizes:
   - Name: Desktop
-    Value: 43520
+    Value: 168064
+  Exists: 1
+--- !u!114 &5566515706685750747
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Latch/Level
+  m_EditorClassIdentifier: 
+  Name: Level
+  StudioPath: 
+  Min: 0
+  Max: 5
+  Default: 1
+  ID:
+    data1: 3987721510
+    data2: 2599653567
+  Type: 1
+  IsGlobal: 1
+  Labels: []
   Exists: 1
 --- !u!114 &6429085130293639191
 MonoBehaviour:
@@ -431,7 +687,8 @@ MonoBehaviour:
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
-  Parameters: []
+  Parameters:
+  - {fileID: 5566515706685750747}
   MinDistance: 1
   MaxDistance: 20
   Length: 1010
@@ -470,8 +727,28 @@ MonoBehaviour:
   Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/Background.bank
   Name: Background
   StudioPath: bank:/Background
-  lastModified: 638718722234923506
+  lastModified: 638738708110506710
   FileSizes:
   - Name: Desktop
-    Value: 2050
+    Value: 6441632
+  Exists: 1
+--- !u!114 &8115551339316560077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/End.bank
+  m_EditorClassIdentifier: 
+  Path: ../RP_FMOD/RockPicking_FMOD/Build/Desktop/End.bank
+  Name: End
+  StudioPath: bank:/End
+  lastModified: 638738705384277699
+  FileSizes:
+  - Name: Desktop
+    Value: 1196608
   Exists: 1

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="MixerGroup" id="{89fa151b-7dd9-4e23-848c-24b55bec8539}">
+		<property name="volume">
+			<value>-2</value>
+		</property>
+		<property name="name">
+			<value>LatchClick</value>
+		</property>
+		<relationship name="effectChain">
+			<destination>{7b8a0b60-3299-43a8-9829-e0e5da62fda8}</destination>
+		</relationship>
+		<relationship name="panner">
+			<destination>{5b294d96-c437-4419-a7be-00537d622193}</destination>
+		</relationship>
+		<relationship name="output">
+			<destination>{d5e12ebf-2cd5-4c03-aae6-1f6393b6c063}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusEffectChain" id="{7b8a0b60-3299-43a8-9829-e0e5da62fda8}">
+		<relationship name="effects">
+			<destination>{415fc402-edf2-45ce-83b6-4cb3f5c8b84c}</destination>
+		</relationship>
+	</object>
+	<object class="MixerBusPanner" id="{5b294d96-c437-4419-a7be-00537d622193}" />
+	<object class="MixerBusFader" id="{415fc402-edf2-45ce-83b6-4cb3f5c8b84c}" />
+</objects>

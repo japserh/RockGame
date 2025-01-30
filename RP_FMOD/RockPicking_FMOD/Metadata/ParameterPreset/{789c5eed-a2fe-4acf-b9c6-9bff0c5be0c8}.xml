@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="ParameterPreset" id="{789c5eed-a2fe-4acf-b9c6-9bff0c5be0c8}">
+		<property name="name">
+			<value>Threat_Distance</value>
+		</property>
+		<relationship name="folder">
+			<destination>{8566992f-adff-41f6-ac2e-8f860af4cc07}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{3da8f273-5568-4961-8357-7d2f77c868c9}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{3da8f273-5568-4961-8357-7d2f77c868c9}">
+		<property name="maximum">
+			<value>100</value>
+		</property>
+		<property name="isGlobal">
+			<value>true</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
