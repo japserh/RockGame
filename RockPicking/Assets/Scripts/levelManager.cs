@@ -3,6 +3,7 @@ using FMODUnity;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 using Random = UnityEngine.Random;
 
 public class LevelManager : MonoBehaviour
@@ -26,11 +27,13 @@ public class LevelManager : MonoBehaviour
     public float threatStartingDistance = 50;
     public float threatSpeed = 1;
     public float threatDecreasePerLevel = 20;
-    
+
+    public int nextSceneIndex = 0;
     
     [SerializeField] private StudioEventEmitter latchSound;
     [SerializeField] private StudioEventEmitter passStageSound;
     [SerializeField] private StudioEventEmitter passLevelSound;
+    [SerializeField] private StudioEventEmitter wrongPinSound;
     [SerializeField] private StudioEventEmitter loseSound;
     [SerializeField] private StudioEventEmitter winSound;
     
@@ -68,12 +71,6 @@ public class LevelManager : MonoBehaviour
         }
     }
 
-    private void loseGame()
-    {
-        loseSound.Play();
-        Debug.Log("Loooosseeeee");
-    }
-
     public void onWheelPositionChanged()
     {
         ResetTimer();
@@ -84,6 +81,10 @@ public class LevelManager : MonoBehaviour
         if (currentTooth == correctTooth)
         {
             Success();
+        }
+        else
+        {
+            wrongPinSound.Play();
         }
         ResetTimer();
     }
@@ -103,16 +104,10 @@ public class LevelManager : MonoBehaviour
             if (level == winLevel)
             {
                 winGame();
+                Invoke(nameof(Restart),5);
             }
         }
         passStageSound.Play();
-    }
-
-    private void winGame()
-    {
-        winSound.Play();
-        Debug.Log("Win!!! yay");
-        Invoke(nameof(Application.Quit),5f);
     }
 
     private void ResetTimer()
@@ -124,6 +119,25 @@ public class LevelManager : MonoBehaviour
     {
         passLevelSound.Play();
         FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level", level);
+    }
+    
+    private void winGame()
+    {
+        winSound.Play();
+        Debug.Log("Win!!! yay");
+        Invoke(nameof(Application.Quit),5f);
+    }
+    
+    private void loseGame()
+    {
+        loseSound.Play();
+        Debug.Log("Loooosseeeee");
+        Invoke(nameof(Restart),5);
+    }
+
+    private void Restart()
+    {
+        SceneManager.LoadScene(nextSceneIndex);
     }
 
 }

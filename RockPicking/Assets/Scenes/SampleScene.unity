@@ -208,7 +208,7 @@ MonoBehaviour:
     Path: event:/Goal
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -239,7 +239,7 @@ MonoBehaviour:
     Path: event:/Threat
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -270,7 +270,7 @@ MonoBehaviour:
     Path: event:/Ambience
   Event: 
   EventPlayTrigger: 1
-  EventStopTrigger: 0
+  EventStopTrigger: 2
   AllowFadeout: 1
   TriggerOnce: 0
   Preload: 0
@@ -310,7 +310,7 @@ MonoBehaviour:
   threatSound: {fileID: 477495183}
   ambienceSound: {fileID: 477495184}
   goalSound: {fileID: 477495182}
-  lerpFactor: 0.2
+  lerpFactor: 1
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -423,6 +423,7 @@ GameObject:
   - component: {fileID: 775281618}
   - component: {fileID: 775281621}
   - component: {fileID: 775281620}
+  - component: {fileID: 775281622}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -456,9 +457,11 @@ MonoBehaviour:
   threatStartingDistance: 100
   threatSpeed: 1
   threatDecreasePerLevel: 20
+  nextSceneIndex: 0
   latchSound: {fileID: 775281617}
   passStageSound: {fileID: 775281619}
   passLevelSound: {fileID: 775281618}
+  wrongPinSound: {fileID: 775281622}
   loseSound: {fileID: 775281621}
   winSound: {fileID: 775281620}
   backgroundSound: {fileID: 477495186}
@@ -626,6 +629,37 @@ MonoBehaviour:
   EventStopTrigger: 0
   AllowFadeout: 1
   TriggerOnce: 1
+  Preload: 0
+  NonRigidbodyVelocity: 0
+  Params: []
+  OverrideAttenuation: 0
+  OverrideMinDistance: 1
+  OverrideMaxDistance: 20
+--- !u!114 &775281622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 775281614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6610d2e704f1648819acc8d7460285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CollisionTag: 
+  EventReference:
+    Guid:
+      Data1: 1323929925
+      Data2: 1276113887
+      Data3: -75635265
+      Data4: -1706468115
+    Path: event:/Wrong Pin
+  Event: 
+  EventPlayTrigger: 0
+  EventStopTrigger: 0
+  AllowFadeout: 1
+  TriggerOnce: 0
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
