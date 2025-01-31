@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     
     public int currentTooth = 0;
     public int correctTooth = 0;
+    public bool justMoved = false;
 
     public float confirmDelay = 1;
     private float confirmTimer;
@@ -21,8 +22,11 @@ public class LevelManager : MonoBehaviour
     public SerialRotator wheel;
     public KeyCode confirm = KeyCode.Space;
     
-    private float catTime = 0;
-    public float göpySlöpyTime = 120;
+    public float threatDistance = 0;
+    public float threatStartingDistance = 50;
+    public float threatSpeed = 1;
+    public float threatDecreasePerLevel = 20;
+    
     
     [SerializeField] private StudioEventEmitter latchSound;
     [SerializeField] private StudioEventEmitter passStageSound;
@@ -35,16 +39,17 @@ public class LevelManager : MonoBehaviour
     private void Start()
     {
         StartLevel();
-        catTime = göpySlöpyTime / 2;
+        threatDistance = threatStartingDistance;
     }
 
     private void Update()
     {
-        catTime += Time.deltaTime;
+        threatDistance -= Time.deltaTime * threatSpeed;
+        justMoved = (currentTooth != wheel.position);
         currentTooth = wheel.position;
         confirmTimer -= Time.deltaTime;
         
-        if (currentTooth == correctTooth)
+        if ((currentTooth == correctTooth) && justMoved)
         {
             latchSound.Play();
         }
@@ -54,9 +59,10 @@ public class LevelManager : MonoBehaviour
             ConfirmPosition();
         }
         
-        backgroundSound.SetThreatParameter(catTime/göpySlöpyTime * 100);
+        backgroundSound.SetThreatParameter((1 - (threatDistance/threatStartingDistance)) * 100);
+        Debug.Log("threat percentage = " + ((1 - (threatDistance / threatStartingDistance)) * 100));
         
-        if (catTime > göpySlöpyTime)
+        if (threatDistance <= 0f)
         {
             loseGame();
         }
@@ -93,6 +99,7 @@ public class LevelManager : MonoBehaviour
             level++;
             stage = 0;
             StartLevel();
+            threatDistance += threatDecreasePerLevel;
             if (level == winLevel)
             {
                 winGame();
@@ -116,7 +123,7 @@ public class LevelManager : MonoBehaviour
     private void StartLevel()
     {
         passLevelSound.Play();
-        latchSound.SetParameter("Level",level);
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Level", level);
     }
 
 }

@@ -70,9 +70,6 @@
 		<property name="maxVoices">
 			<value>1</value>
 		</property>
-		<property name="triggerCooldown">
-			<value>2200</value>
-		</property>
 	</object>
 	<object class="MarkerTrack" id="{18f1d9aa-2006-46fa-918a-e1d7e7ecf89f}" />
 	<object class="GroupTrack" id="{a5a8fbcc-b672-4e79-896d-d1f232b5558c}">
@@ -237,7 +234,7 @@
 			<value>3</value>
 		</property>
 		<property name="value">
-			<value>-10</value>
+			<value>-14</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{05817bcd-a08e-45bf-8ad4-db11542ba59a}">
@@ -245,7 +242,7 @@
 			<value>2</value>
 		</property>
 		<property name="value">
-			<value>-4</value>
+			<value>-6</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{3add12e8-44db-4e43-a727-3e02702a5517}">

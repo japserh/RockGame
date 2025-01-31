@@ -306,11 +306,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f044b30029a9b4fbe85245a2f54dbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelManager: {fileID: 0}
-  threatSound: {fileID: 0}
-  ambienceSound: {fileID: 0}
-  goalSound: {fileID: 0}
-  lerpFactor: 0
+  levelManager: {fileID: 775281615}
+  threatSound: {fileID: 477495183}
+  ambienceSound: {fileID: 477495184}
+  goalSound: {fileID: 477495182}
+  lerpFactor: 0.2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -442,16 +442,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ac64da091285234fb9a300e5c76a982, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  level: 0
-  stage: 0
+  level: 1
+  stage: -1
   stagesPerLevel: 3
   winLevel: 4
   currentTooth: 0
   correctTooth: 0
+  justMoved: 0
   confirmDelay: 1
   wheel: {fileID: 314159067}
   confirm: 32
-  "g\xF6pySl\xF6pyTime": 60
+  threatDistance: 0
+  threatStartingDistance: 100
+  threatSpeed: 1
+  threatDecreasePerLevel: 20
   latchSound: {fileID: 775281617}
   passStageSound: {fileID: 775281619}
   passLevelSound: {fileID: 775281618}
@@ -590,7 +594,7 @@ MonoBehaviour:
   EventPlayTrigger: 0
   EventStopTrigger: 0
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
@@ -621,7 +625,7 @@ MonoBehaviour:
   EventPlayTrigger: 0
   EventStopTrigger: 0
   AllowFadeout: 1
-  TriggerOnce: 0
+  TriggerOnce: 1
   Preload: 0
   NonRigidbodyVelocity: 0
   Params: []
